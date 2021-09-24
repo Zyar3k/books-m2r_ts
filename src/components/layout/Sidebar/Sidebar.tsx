@@ -1,5 +1,7 @@
+import { SidebarStyled } from "./Sidebar.styles";
+
 const Sidebar = () => {
-  return <aside>sidebar</aside>;
+  return <SidebarStyled>sidebar</SidebarStyled>;
 };
 
 export default Sidebar;

@@ -1,5 +1,7 @@
+import { MainViewStyled } from "./MainView.styles";
+
 const MainView = () => {
-  return <main>mainview</main>;
+  return <MainViewStyled>Main</MainViewStyled>;
 };
 
 export default MainView;

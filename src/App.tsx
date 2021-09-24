@@ -3,13 +3,21 @@ import Footer from "./components/layout/Footer/Footer";
 import Sidebar from "./components/layout/Sidebar/Sidebar";
 import MainView from "./components/views/MainView/MainView";
 
+// import { MainWrapper } from "./App.styles";
+import { GlobalStyles } from "./Global";
+import Content from "./components/layout/Content/Content";
+
 const App = () => {
   return (
     <>
+      <GlobalStyles />
       <Header />
-      <Sidebar />
-      <MainView />
-      <Footer />
+
+      <Content>
+        {/* <Sidebar />
+        <MainView /> */}
+      </Content>
+      {/* <Footer /> */}
     </>
   );
 };
