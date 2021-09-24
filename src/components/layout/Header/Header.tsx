@@ -1,5 +1,4 @@
 import { StyleHeader, HeaderWrapper, LogoWrapper } from "./Header.styles";
-import { GiBookshelf, GiBookmark } from "react-icons/gi";
 
 const Header = () => {
   return (

@@ -1,11 +1,5 @@
-import { Container } from "../../../Global";
-
 const Footer = () => {
-  return (
-    <footer>
-      <Container>footer</Container>
-    </footer>
-  );
+  return <footer>footer</footer>;
 };
 
 export default Footer;

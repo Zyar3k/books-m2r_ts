@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const StyleHeader = styled.header`
   padding: 10px;
-  background: #fed8a7;
   background: #290001;
   height: 80px;
-  color: #07a4b5;
   color: #dbcbbd;
 `;
 
@@ -17,12 +15,12 @@ export const HeaderWrapper = styled.nav`
 
   ul {
     display: flex;
+    margin-left: 10px;
     padding: 0 10px;
     flex: 1;
     justify-content: space-between;
     list-style: none;
     letter-spacing: 1px;
-
     color: #eabf9f;
 
     li {
@@ -44,15 +42,16 @@ export const HeaderWrapper = styled.nav`
 `;
 
 export const LogoWrapper = styled.nav`
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  width: 230px;
 
   h2 {
     font-size: 30px;
     font-weight: 900;
+
     span {
       color: #fff;
       text-shadow: 0 0 15px #fff;

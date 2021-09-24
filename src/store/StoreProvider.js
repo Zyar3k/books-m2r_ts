@@ -6,6 +6,8 @@ export const StoreContext = createContext();
 
 const StoreProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
+  const [isLogged, setIsLogged] = useState(false);
+  // const [isLogged, setIsLogged] = useState(true);
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
@@ -18,7 +20,7 @@ const StoreProvider = ({ children }) => {
   }, []);
 
   return (
-    <StoreContext.Provider value={{ books, setBooks }}>
+    <StoreContext.Provider value={{ books, setBooks, isLogged, setIsLogged }}>
       {children}
     </StoreContext.Provider>
   );

@@ -1,5 +1,5 @@
 import Header from "./components/layout/Header/Header";
-import Footer from "./components/layout/Footer/Footer";
+// import Footer from "./components/layout/Footer/Footer";
 import Sidebar from "./components/layout/Sidebar/Sidebar";
 import MainView from "./components/views/MainView/MainView";
 
@@ -14,8 +14,8 @@ const App = () => {
       <Header />
 
       <Content>
-        {/* <Sidebar />
-        <MainView /> */}
+        <Sidebar />
+        <MainView />
       </Content>
       {/* <Footer /> */}
     </>
