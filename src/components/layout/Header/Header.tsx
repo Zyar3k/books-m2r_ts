@@ -1,3 +1,4 @@
+import ListSelection from "../../features/ListSelection/ListSelection";
 import { StyleHeader, HeaderWrapper, LogoWrapper } from "./Header.styles";
 
 const Header = () => {
@@ -11,14 +12,7 @@ const Header = () => {
             READ
           </h2>
         </LogoWrapper>
-        <ul>
-          <li>Pełna lista</li>
-          <li>Amazon</li>
-          <li>BBC</li>
-          <li>Empik</li>
-          <li>Gandalf</li>
-          <li>Pozycje</li>
-        </ul>
+        <ListSelection />
       </HeaderWrapper>
     </StyleHeader>
   );
