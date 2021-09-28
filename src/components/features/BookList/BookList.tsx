@@ -1,15 +1,23 @@
+import BookTile from "../BookTile/BookTile";
+import { BookListStyled } from "./BookList.styles";
+
 type BookListProps = {
   books?: IBook[] | null;
 };
 
 const BookList: React.FC<BookListProps> = ({ books }) => {
-  // console.log("booklis: ", books);
   return (
-    <div>
-      {books?.map((book, index) => (
-        <p key={index}>{book.title}</p>
-      ))}
-    </div>
+    <BookListStyled>
+      {books?.length === 0 ? (
+        "Wczytuję"
+      ) : (
+        <>
+          {books?.map((book, index) => (
+            <BookTile key={index} book={book} />
+          ))}
+        </>
+      )}
+    </BookListStyled>
   );
 };
 

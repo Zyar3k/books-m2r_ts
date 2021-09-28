@@ -4,7 +4,6 @@ export const SidebarStyled = styled.aside`
   color: #eabf9f;
   background: #290001;
   width: 250px;
-
   padding: 10px 20px;
 
   ul {

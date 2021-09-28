@@ -1,7 +1,7 @@
 interface IBook {
   _id: string;
   key: string;
-  author: string;
+  author: { name: string; lastName: string };
   title: string;
   bbc: boolean;
   emp: boolean;

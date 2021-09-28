@@ -8,9 +8,6 @@ import { MainViewStyled } from "./MainView.styles";
 const MainView: React.FC = () => {
   const { books } = useContext(StoreContext) as ContextType;
 
-  console.log("MainView: ", books);
-  console.log(books?.length);
-
   return (
     <MainViewStyled>
       <BookList books={books} />
