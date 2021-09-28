@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ListSelectionStyled = styled.ul`
+export const ListSelectionStyled = styled.div`
   display: flex;
   margin-left: 30px;
   padding: 0 10px;
@@ -10,7 +10,31 @@ export const ListSelectionStyled = styled.ul`
   letter-spacing: 1px;
   color: #eabf9f;
 
-  li {
+  div {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+
+      input {
+        margin-right: 10px;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      text-shadow: 0 0 15px #fff;
+    }
+  }
+
+  /* li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,9 +44,6 @@ export const ListSelectionStyled = styled.ul`
     text-transform: uppercase;
     font-weight: 700;
 
-    &:hover {
-      color: #fff;
-      text-shadow: 0 0 15px #fff;
-    }
-  }
+
+  } */
 `;

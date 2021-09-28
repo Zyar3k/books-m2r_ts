@@ -13,7 +13,7 @@ const BookList: React.FC<BookListProps> = ({ books }) => {
 
   return (
     <BookListStyled>
-      <div style={{ width: "100%" }}>
+      {/* <div style={{ width: "100%" }}>
         <button onClick={listFilter} name='all'>
           PEŁNA LISTA
         </button>
@@ -32,7 +32,7 @@ const BookList: React.FC<BookListProps> = ({ books }) => {
         <button onClick={listFilter} name='pozy'>
           POZYCJE
         </button>
-      </div>
+      </div> */}
       {books?.length === 0 ? (
         "Wczytuję"
       ) : (

@@ -6,7 +6,8 @@ export const StoreContext = createContext<ContextType | null>(null);
 
 const StoreProvider = ({ children }: any) => {
   const [books, setBooks] = useState<IBook[]>([]);
-  const [displayList, setDisplayList] = useState<IBook[]>(books);
+
+  const [data, setData] = useState<IBook[]>([]);
   const [isLogged, setIsLogged] = useState(false);
   // const [isLogged, setIsLogged] = useState(true);
 
@@ -14,6 +15,7 @@ const StoreProvider = ({ children }: any) => {
     const { data } = await request.get("/books");
 
     setBooks(data);
+    setData(data);
   };
 
   const toggleLog = () => {
@@ -21,41 +23,32 @@ const StoreProvider = ({ children }: any) => {
   };
 
   const listFilter = (e: React.FormEvent<HTMLInputElement>) => {
-    const newValue = e.currentTarget.name;
+    // const listName = e.currentTarget.name;
+    const listName = e.currentTarget.value;
+    console.log(e.currentTarget.name);
+    console.log(e.currentTarget.value);
+    let array;
 
-    const testArray = [...books];
-    console.log(testArray.length);
-    // console.log(newValue);
-    // console.log(e.target);
-    // let array;
-    // array = books?.filter((item) => item.ama === true);
+    switch (listName) {
+      case "ama":
+        array = data?.filter((item) => item.ama === true);
+        return setBooks(array);
+      case "bbc":
+        array = data?.filter((item) => item.bbc === true);
+        return setBooks(array);
+      case "emp":
+        array = data?.filter((item) => item.emp === true);
+        return setBooks(array);
+      case "gan":
+        array = data?.filter((item) => item.gan === true);
+        return setBooks(array);
+      case "pozy":
+        array = data?.filter((item) => item.pozy === true);
+        return setBooks(array);
 
-    if (newValue === "ama") {
-      console.log("books leng bef: ", books.length);
-      setBooks(books);
-      const array = testArray?.filter((item) => item.ama === true);
-      console.log("books leng after: ", books.length);
-      return setBooks(array);
-    } else if (newValue === "bbc") {
-      setBooks((prev) => prev);
-      const array = testArray?.filter((item) => item.bbc === true);
-      return setBooks(array);
+      default:
+        return setBooks(data);
     }
-
-    // switch (newValue) {
-    //   case "ama":
-    //     return books?.filter((item) => item.ama === true);
-    //   case "bbc":
-    //     return console.log("bbc");
-    //   case "emp":
-    //     return console.log("emp");
-    //   case "gan":
-    //     return console.log("gan");
-    //   case "pozy":
-    //     return console.log("pozy");
-    //   default:
-    //     return console.log("all");
-    // }
   };
 
   useEffect(() => {
