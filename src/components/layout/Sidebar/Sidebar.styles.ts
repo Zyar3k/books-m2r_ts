@@ -5,6 +5,9 @@ export const SidebarStyled = styled.aside`
   background: #290001;
   width: 250px;
   padding: 10px 20px;
+  position: fixed;
+  top: 80px;
+  bottom: 0;
 
   ul {
     margin-bottom: 30px;

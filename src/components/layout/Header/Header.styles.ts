@@ -5,6 +5,10 @@ export const StyleHeader = styled.header`
   background: #290001;
   height: 80px;
   color: #dbcbbd;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const HeaderWrapper = styled.nav`
