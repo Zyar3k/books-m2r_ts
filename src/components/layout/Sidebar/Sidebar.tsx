@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 
 const Sidebar = () => {
-  let { isLogged } = useContext(StoreContext) as ContextType;
+  let { toggleLog, isLogged } = useContext(StoreContext) as ContextType;
 
   return (
     <SidebarStyled>
@@ -26,6 +26,7 @@ const Sidebar = () => {
           <span>
             <BiSort />
           </span>
+          <button onClick={toggleLog}>Change</button>
         </li>
         <li>
           <p>Po nazwisku autora</p>

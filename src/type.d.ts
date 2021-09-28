@@ -16,5 +16,8 @@ interface IBook {
 
 type ContextType = {
   books: IBook[] | null | undefined;
+  listFilter: (e: any) => void;
+  toggleLog: () => void;
   isLogged: boolean;
+  // setIsLogged: React.Dispatch<React.SetStateAction<boolean>>;
 };
