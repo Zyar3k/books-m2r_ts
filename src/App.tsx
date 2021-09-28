@@ -1,3 +1,4 @@
+// import { useContext } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/layout/Header/Header";
@@ -10,7 +11,13 @@ import { GlobalStyles } from "./Global";
 import Content from "./components/layout/Content/Content";
 import BookExtension from "./components/views/BookExtension/BookExtension";
 
+// import { StoreContext } from "./store/StoreProvider";
+
 const App = () => {
+  // const { books, isLogged } = useContext(StoreContext) as ContextType;
+  // console.log(StoreContext);
+  // console.log(books);
+  // console.log(isLogged);
   return (
     <>
       <GlobalStyles />

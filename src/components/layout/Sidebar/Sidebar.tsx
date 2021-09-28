@@ -1,9 +1,9 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { SidebarStyled } from "./Sidebar.styles";
 import { StoreContext } from "../../../store/StoreProvider";
 
 import { BiSort } from "react-icons/bi";
-import { GrUserExpert } from "react-icons/gr";
+
 import { BsBookmarkDash, BsBookmarkCheck } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 import { CgUnavailable } from "react-icons/cg";
@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 
 const Sidebar = () => {
-  let { isLogged, setIsLogged } = useContext(StoreContext);
+  let { isLogged } = useContext(StoreContext) as ContextType;
 
   return (
     <SidebarStyled>
