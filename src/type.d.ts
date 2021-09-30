@@ -19,5 +19,4 @@ type ContextType = {
   listFilter: (e: any) => void;
   toggleLog: () => void;
   isLogged: boolean;
-  // setIsLogged: React.Dispatch<React.SetStateAction<boolean>>;
 };

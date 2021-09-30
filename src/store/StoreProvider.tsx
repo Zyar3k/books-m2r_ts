@@ -9,7 +9,6 @@ const StoreProvider = ({ children }: any) => {
 
   const [data, setData] = useState<IBook[]>([]);
   const [isLogged, setIsLogged] = useState(false);
-  // const [isLogged, setIsLogged] = useState(true);
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
@@ -23,10 +22,8 @@ const StoreProvider = ({ children }: any) => {
   };
 
   const listFilter = (e: React.FormEvent<HTMLInputElement>) => {
-    // const listName = e.currentTarget.name;
     const listName = e.currentTarget.value;
-    console.log(e.currentTarget.name);
-    console.log(e.currentTarget.value);
+
     let array;
 
     switch (listName) {
@@ -55,10 +52,10 @@ const StoreProvider = ({ children }: any) => {
     fetchData();
   }, []);
 
+  let value = { books, listFilter, isLogged, toggleLog };
+
   return (
-    <StoreContext.Provider value={{ books, listFilter, isLogged, toggleLog }}>
-      {children}
-    </StoreContext.Provider>
+    <StoreContext.Provider value={value}>{children}</StoreContext.Provider>
   );
 };
 

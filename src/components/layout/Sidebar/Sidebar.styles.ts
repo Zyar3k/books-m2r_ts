@@ -10,7 +10,9 @@ export const SidebarStyled = styled.aside`
   bottom: 0;
 
   ul {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
+    list-style: none;
+
     li {
       display: flex;
       justify-content: space-between;
@@ -18,32 +20,43 @@ export const SidebarStyled = styled.aside`
       border-bottom: 1px solid #c87941;
 
       :first-of-type {
-        margin-bottom: 14px;
         border-bottom: 3px solid #c87941;
       }
-
-      h3 {
-        padding: 10px 0;
-      }
-
-      p {
-        padding: 10px 0;
-      }
-
-      span {
-        position: relative;
-        background: teal;
-        width: 50px;
-        font-size: 20px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-          position: absolute;
-        }
-      }
     }
+  }
+`;
+
+export const SidebarTitleStyled = styled.li`
+  padding: 10px 0;
+  text-transform: uppercase;
+
+  span {
+    width: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const SidebarItemStyled = styled.li`
+  flex-wrap: wrap;
+  padding: 8px 0;
+
+  h4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    padding: 4px 0;
+  }
+  span {
+    width: 50px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

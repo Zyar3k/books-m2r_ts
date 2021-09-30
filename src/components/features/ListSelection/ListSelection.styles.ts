@@ -33,17 +33,4 @@ export const ListSelectionStyled = styled.div`
       text-shadow: 0 0 15px #fff;
     }
   }
-
-  /* li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    width: 100%;
-    height: 100%;
-    text-transform: uppercase;
-    font-weight: 700;
-
-
-  } */
 `;
