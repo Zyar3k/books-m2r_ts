@@ -4,7 +4,7 @@ export const SidebarStyled = styled.aside`
   color: #eabf9f;
   background: #290001;
   width: 250px;
-  padding: 10px 20px;
+  padding: 0 20px;
   position: fixed;
   top: 80px;
   bottom: 0;
@@ -20,6 +20,7 @@ export const SidebarStyled = styled.aside`
       border-bottom: 1px solid #c87941;
 
       :first-of-type {
+        padding-top: 4px;
         border-bottom: 3px solid #c87941;
       }
     }
@@ -41,12 +42,20 @@ export const SidebarTitleStyled = styled.li`
 
 export const SidebarItemStyled = styled.li`
   flex-wrap: wrap;
-  padding: 8px 0;
+  padding: 4px 0;
 
   h4 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    strong {
+      width: 50px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   p {

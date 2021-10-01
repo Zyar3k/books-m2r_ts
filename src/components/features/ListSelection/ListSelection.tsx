@@ -11,7 +11,8 @@ const ListSelection = () => {
       html: "all",
       value: "all",
       id: "all",
-      name: "Pełna lista"
+      name: "Pełna lista",
+      default: true
     },
     {
       html: "ama",
@@ -52,6 +53,7 @@ const ListSelection = () => {
           <label htmlFor={item.html}>
             <input
               onChange={listFilter}
+              defaultChecked={item.default}
               type='radio'
               name='list-filter'
               value={item.value}
